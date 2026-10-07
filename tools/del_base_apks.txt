@@ -1,0 +1,10 @@
+rm /app/com.fanshi.tvbrowser-1/base.apk
+rm /app/com.mxtech.videoplayer.pro-1/base.apk
+rm /app/com.pplive.androidxl-1/base.apk
+rm /app/com.speedsoftware.rootexplorer-1/base.apk
+rm /app/com.sumavision.ivideoforstb-1/base.apk
+rm /app/com.tcl.gitv-1/base.apk
+rm /app/com.xctv2018.mytv-1/base.apk
+rm /app/dpplay.com-1/base.apk
+rm /app/fr.petrus.tools.reboot-1/base.apk
+rm /app/jackpal.androidterm-2/base.apk

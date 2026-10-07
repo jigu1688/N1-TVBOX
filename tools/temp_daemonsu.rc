@@ -1,0 +1,23 @@
+# powered by Rush , mod by webpad
+
+on boot
+    start webpadservice
+    start sleepdaemon
+
+on property:ro.debuggable=0
+    start webpadservice
+
+on property:ro.debuggable=1
+    start webpadservice
+
+service webpadservice /system/bin/webpad
+    class main
+    group root shell log readproc
+    oneshot
+    seclabel u:r:adbd:s0
+
+service sleepdaemon /system/xbin/busybox nc -ll -p 19999 -e /system/bin/do_sleep.sh
+    class main
+    user root
+    group root
+    seclabel u:r:su:s0

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>NextGen 隔空传装 & 盒子管家 - 斐讯 N1</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(22, 29, 47, 0.72);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #06b6d4;
+      --primary-hover: #22d3ee;
+      --accent: #8b5cf6;
+      --accent-hover: #a78bfa;
+      --text: #f8fafc;
+      --text-dim: #94a3b8;
+      --danger: #ef4444;
+      --danger-bg: rgba(239, 68, 68, 0.15);
+      --success: #10b981;
+      --hover-bg: rgba(255, 255, 255, 0.04);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body {
+      background: radial-gradient(circle at 80% -20%, #2e1065 0%, transparent 50%),
+                  radial-gradient(circle at 10% 20%, #083344 0%, transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 40px;
+    }
+    .container { width: 100%; max-width: 980px; display: flex; flex-direction: column; gap: 16px; }
+
+    /* Header & Nav */
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 4px 6px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .badge-online {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981; }
+
+    /* Segmented Tabs */
+    .tab-bar {
+      display: flex;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--card-border);
+      padding: 4px;
+      border-radius: 12px;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 9px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dim);
+      background: transparent;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover { color: var(--text); background: rgba(255, 255, 255, 0.03); }
+    .tab-btn.active {
+      color: #fff;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(139, 92, 246, 0.25));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Drop Zone */
+    .drop-zone {
+      border: 2px dashed rgba(56, 189, 248, 0.35);
+      border-radius: 14px;
+      padding: 38px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(56, 189, 248, 0.02);
+    }
+    .drop-zone.dragover {
+      border-color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      transform: scale(1.008);
+    }
+    .drop-icon { font-size: 46px; margin-bottom: 10px; display: block; filter: drop-shadow(0 4px 12px rgba(56,189,248,0.3)); }
+    .drop-title { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+    .drop-sub { font-size: 13px; color: var(--text-dim); }
+
+    .options-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .toggle-label input { width: 17px; height: 17px; accent-color: var(--primary); }
+
+    /* Progress Box */
+    .progress-box { display: none; margin-top: 6px; }
+    .progress-bar-bg { width: 100%; height: 8px; background: rgba(255, 255, 255, 0.08); border-radius: 999px; overflow: hidden; margin-top: 6px; }
+    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #06b6d4, #8b5cf6); transition: width 0.15s ease; }
+
+    /* Buttons */
+    .btn {
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+    .btn-sm { padding: 4px 10px; font-size: 12px; border-radius: 6px; }
+    .btn-primary { background: #06b6d4; color: #000; }
+    .btn-primary:hover { background: #22d3ee; }
+    .btn-install { background: #06b6d4; color: #000; }
+    .btn-install:hover { background: #22d3ee; box-shadow: 0 0 10px rgba(6,182,212,0.5); }
+    .btn-down { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .btn-down:hover { background: rgba(56, 189, 248, 0.25); }
+    .btn-edit { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .btn-edit:hover { background: rgba(168, 85, 247, 0.25); }
+    .btn-del { background: var(--danger-bg); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .btn-del:hover { background: rgba(239, 68, 68, 0.25); }
+    .btn-secondary { background: rgba(255, 255, 255, 0.08); color: var(--text); border: 1px solid var(--card-border); }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.15); }
+
+    /* Storage Capacity Bar */
+    .stat-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-dim); }
+    .storage-bar-bg { width: 100%; height: 6px; background: rgba(255, 255, 255, 0.08); border-radius: 999px; overflow: hidden; }
+    .storage-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #06b6d4, #8b5cf6); }
+
+    /* Push File List */
+    .file-list { display: flex; flex-direction: column; gap: 8px; }
+    .file-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      gap: 12px;
+    }
+    .file-info { display: flex; flex-direction: column; gap: 4px; overflow: hidden; min-width: 0; }
+    .file-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .file-meta { font-size: 12px; color: var(--text-dim); }
+    .btn-group { display: flex; gap: 6px; flex-shrink: 0; }
+
+    /* --- File Manager View (FS) --- */
+    .fs-storage-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .fs-storage-bar::-webkit-scrollbar { height: 4px; }
+    .fs-storage-bar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+    .storage-chip {
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      color: var(--text);
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    .storage-chip:hover { background: rgba(255, 255, 255, 0.09); }
+    .storage-chip-active {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: rgba(6, 182, 212, 0.4);
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .fs-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+    .fs-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      font-weight: 500;
+      overflow: hidden;
+    }
+    .bc-item {
+      color: #38bdf8;
+      cursor: pointer;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .bc-item:hover { background: rgba(56, 189, 248, 0.12); }
+    .bc-sep { color: var(--text-dim); }
+    .fs-tool-btns {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      color: #fff;
+      font-size: 13px;
+      width: 130px;
+      transition: width 0.2s;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: #38bdf8;
+      width: 170px;
+    }
+
+    /* FS Table */
+    .fs-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.4);
+    }
+    .fs-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+    .fs-table th {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px 12px;
+      color: var(--text-dim);
+      font-weight: 600;
+      border-bottom: 1px solid var(--card-border);
+      white-space: nowrap;
+    }
+    .fs-row {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: background 0.15s;
+    }
+    .fs-row:last-child { border-bottom: none; }
+    .fs-row:hover { background: var(--hover-bg); }
+    .fs-td-name {
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 220px;
+      max-width: 380px;
+    }
+    .fs-icon { font-size: 17px; flex-shrink: 0; }
+    .fs-name-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .fs-td-size { padding: 10px 12px; color: var(--text-dim); white-space: nowrap; width: 90px; }
+    .fs-td-date { padding: 10px 12px; color: var(--text-dim); white-space: nowrap; width: 140px; }
+    .fs-td-actions { padding: 10px 12px; text-align: right; white-space: nowrap; width: 190px; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+    .modal-card {
+      background: #131b2e;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .modal-title { font-size: 16px; font-weight: 600; color: #f8fafc; }
+    .modal-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 9px 12px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .modal-input:focus { outline: none; border-color: #38bdf8; }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+
+    /* Toast */
+    .toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 1100;
+      pointer-events: none;
+    }
+    .toast {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      background: #1e293b;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      pointer-events: auto;
+      max-width: 320px;
+    }
+    .toast-success { border-color: #10b981; color: #34d399; }
+    .toast-error { border-color: #ef4444; color: #f87171; }
+    .toast-info { border-color: #38bdf8; color: #38bdf8; }
+
+    @media (max-width: 640px) {
+      .container { gap: 12px; }
+      .card { padding: 14px; }
+      .fs-td-date { display: none; }
+      .fs-td-name { max-width: 160px; }
+      .search-input { width: 90px; }
+      .search-input:focus { width: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">🚀 NextGen 隔空传装 & 盒子管家</div>
+      <div class="badge-online">
+        <span class="badge-dot"></span>
+        <span id="device-badge">斐讯 N1 在线</span>
+      </div>
+    </header>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button class="tab-btn active" id="tab-push">⚡ 极速传装</button>
+      <button class="tab-btn" id="tab-fs">📁 盒子文件管理</button>
+    </div>
+
+    <!-- VIEW 1: 极速传装 (Push Tab) -->
+    <div id="view-push" style="display:flex; flex-direction:column; gap:16px;">
+      <div class="card">
+        <div class="drop-zone" id="dropZone">
+          <span class="drop-icon">📦</span>
+          <div class="drop-title">点击或拖拽 APK / 影视文件至此处</div>
+          <div class="drop-sub">支持批量传输 · 极速局域网直连 · 0 数据损耗</div>
+          <input type="file" id="fileInput" multiple style="display:none;">
+        </div>
+        <div class="options-row">
+          <label class="toggle-label">
+            <input type="checkbox" id="autoInstallCheck" checked>
+            <span>上传完成后自动静默安装 APK</span>
+          </label>
+          <span id="upload-status" style="font-size:13px; color:var(--text-dim);">就绪</span>
+        </div>
+        <div class="progress-box" id="progressBox">
+          <div style="display:flex; justify-content:space-between; font-size:13px;">
+            <span id="progress-name">正在传输...</span>
+            <span id="progress-pct">0%</span>
+          </div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="stat-row">
+          <span>📦 存储空间</span>
+          <span id="storage-text">可用计算中...</span>
+        </div>
+        <div class="storage-bar-bg"><div class="storage-bar-fill" id="storageFill"></div></div>
+        <div style="margin-top:6px; font-weight:600; font-size:15px; display:flex; justify-content:space-between; align-items:center;">
+          <span>📂 已接收文件 (Download 目录)</span>
+          <button class="btn btn-sm btn-secondary" onclick="loadStatus()">🔄 刷新列表</button>
+        </div>
+        <div class="file-list" id="fileList">加载中...</div>
+      </div>
+    </div>
+
+    <!-- VIEW 2: 文件管理 (FS Tab) -->
+    <div id="view-fs" style="display:none; flex-direction:column; gap:16px;">
+      <div class="card" id="fs-drop-zone">
+        <!-- Storage Mount Quick Chips -->
+        <div class="fs-storage-bar" id="fs-storage-chips">
+          <!-- Dynamically filled: 内部存储, 下载目录, 影视目录, U盘等 -->
+        </div>
+
+        <!-- Toolbar & Breadcrumb -->
+        <div class="fs-toolbar">
+          <div class="fs-breadcrumb" id="fs-breadcrumb">
+            <span class="bc-item">/sdcard</span>
+          </div>
+          <div class="fs-tool-btns">
+            <input type="text" class="search-input" id="fs-search-input" placeholder="🔍 搜索过滤...">
+            <button class="btn btn-sm btn-secondary" onclick="window.NextGen.goParent()">⬆️ 上级</button>
+            <button class="btn btn-sm btn-secondary" onclick="window.NextGen.refresh()">🔄 刷新</button>
+            <button class="btn btn-sm btn-secondary" onclick="window.NextGen.createFolderPrompt()">➕ 新建</button>
+            <button class="btn btn-sm btn-primary" onclick="window.NextGen.triggerFsUpload()">📤 上传</button>
+            <input type="file" id="fs-upload-input" multiple style="display:none;">
+          </div>
+        </div>
+
+        <!-- Storage Bar for Current Path -->
+        <div class="stat-row">
+          <span>💾 当前卷容量</span>
+          <span id="fs-storage-text">计算中...</span>
+        </div>
+        <div class="storage-bar-bg"><div class="storage-bar-fill" id="fs-storage-fill"></div></div>
+
+        <!-- File Table -->
+        <div class="fs-table-wrap">
+          <table class="fs-table">
+            <thead>
+              <tr>
+                <th>文件名</th>
+                <th>大小</th>
+                <th>修改时间</th>
+                <th style="text-align:right;">操作</th>
+              </tr>
+            </thead>
+            <tbody id="fs-table-body">
+              <tr><td colspan="4" style="text-align:center; padding:24px; color:var(--text-dim);">加载中...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Dialog -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <div class="modal-title" id="modalTitle">输入</div>
+      <input type="text" class="modal-input" id="modalInput">
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="modalBtnCancel">取消</button>
+        <button class="btn btn-primary" id="modalBtnConfirm">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Embedded Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

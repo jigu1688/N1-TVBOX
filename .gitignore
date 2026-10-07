@@ -1,0 +1,110 @@
+# =========================================================================
+# Phicomm N1 NextGen TV OS - Production .gitignore
+# =========================================================================
+
+# --- 1. Large Compiled Firmware Images (>1GB - GitHub Releases / Cloud Drive) ---
+*.img
+*.7z
+*.PARTITION
+*.raw.img
+*.img.7z
+*.bin
+test.img
+
+# --- 2. Heavy Third-Party Blobs Exceeding GitHub 100MB Hard Limit ---
+tools/webview_119_arm64.apk
+tools/open_gapps-arm64-7.1-pico-20220215.zip
+tools/microg_gmscore.apk
+tools/gapps_raw/
+tools/kodi_libs/
+tools/Kodi_*.apk
+tools/kodi_*.apk
+build_rom/system_root/app/WebViewGoogle/
+
+# --- 3. Consumer APK Bundle (Distribute via Releases/Cloud, not Git code repo) ---
+N1盒子必装应用/
+"N1盒子必装应用/"
+tools/SmartTube.apk
+tools/MXPlayerPro.apk
+tools/FDroid.apk
+tools/AuroraStore*.apk
+ProjectivyLauncher.apk
+ATV Launcher Pro v0.2.1.apk
+
+# --- 4. Large Partition Dumps, Build Packages & Working Caches (>10GB) ---
+extracted_aml/
+extracted_webpad/
+verify_output/
+build_rom/*.raw.img
+build_rom/*.PARTITION
+build_rom/package/
+build_rom/system_clean_base.raw.img
+build_rom/data.raw.img
+build_rom/system.raw.img
+build_rom/framework-res-decoded/
+build_rom/framework_decompiled/
+build_rom/webpad-res-decoded/
+build_rom/framework_power_final.apk
+
+# Stock untouched system dumps in build_rom (only custom overlays needed)
+build_rom/system_root/[SYS]/
+build_rom/system_root/fonts/
+build_rom/system_root/lib/
+build_rom/system_root/tts/
+build_rom/system_root/vendor/
+build_rom/system_root/usr/srec/
+build_rom/system_root/usr/icu/
+build_rom/system_root/framework/arm*
+build_rom/system_root/framework/oat/
+build_rom/system_root/framework/framework-res-pure.apk
+build_rom/system_root/app/hpplay/
+build_rom/system_root/app/Kodi/
+build_rom/system_root/app/MXPlayerPro/
+build_rom/system_root/app/RootExplorer/
+build_rom/system_root/app/SubTitle/
+build_rom/system_root/app/XiaoBaiFile/
+build_rom/system_root/app/Bluetooth/
+build_rom/system_root/app/TVLauncher/
+build_rom/system_root/priv-app/Settings/
+build_rom/system_root/priv-app/SystemUI/
+build_rom/system_root/priv-app/ContactsProvider/
+build_rom/system_root/priv-app/DLNA/
+build_rom/system_root/priv-app/FileManager/
+build_rom/system_root/priv-app/PackageInstaller/
+build_rom/system_root/priv-app/Lighthome/
+build_rom/system_root/priv-app/TVLauncher/
+build_rom/system_root/priv-app/Provision/
+build_rom/system_root/bin/bootplayer
+build_rom/system_root/media/shutdownanimation.zip
+build_rom/system_root/media/audio/
+build_rom/system_root/lib64/*
+!build_rom/system_root/lib64/libsupol.so
+*.bak
+*.base
+
+# --- 5. Reverse Engineering Scratch Dumps & Intermediate Caches in tools ---
+tools/re_tools/
+tools/aml_logo_dump/
+tools/logo_custom_unpacked/
+tools/live_logo_unpacked/
+tools/mx_libs/
+tools/bootanim_frames/
+tools/bootanimation_custom.zip
+tools/*aligned.apk
+tools/*unsigned.apk
+tools/Provision_*.apk
+tools/RootExplorer.apk
+tools/microg_fakestore.apk
+
+# --- 6. Logs, Android Signatures & Temp Databases ---
+logs/
+*.log
+local_test.db
+*.idsig
+
+# --- 7. Python & IDE Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+.tempmediaStorage/
+.user_uploaded/

@@ -1,0 +1,5 @@
+service sleepdaemon /system/xbin/busybox nc -ll -p 19999 -e /system/bin/do_sleep.sh
+    class main
+    user root
+    group root
+    seclabel u:r:su:s0

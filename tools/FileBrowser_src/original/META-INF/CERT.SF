@@ -1,0 +1,356 @@
+Signature-Version: 1.0
+X-Android-APK-Signed: 2
+SHA1-Digest-Manifest: Ieu78h0bFVlmbPotv7yvuPhWRzY=
+Created-By: 1.0 (Android SignApk)
+
+Name: res/drawable-hdpi-v4/btn_switch_default.png
+SHA1-Digest: vsZBaZN4okoPgfRxYNGlnk9z688=
+
+Name: res/mipmap-hdpi-v4/filebrower.png
+SHA1-Digest: 79rAHDZ+D/bnmhMxP1BTRqxs+Vo=
+
+Name: res/drawable-hdpi-v4/item_preview_dir.png
+SHA1-Digest: eOgos1YBEahY6SeDaLh7i8B3mZw=
+
+Name: res/drawable-hdpi-v4/btn_help_default.png
+SHA1-Digest: QebjvRLCIolKTy6zTJ1mF8072VM=
+
+Name: res/drawable-hdpi-v4/sd_card_icon.png
+SHA1-Digest: gbNe+gWu3G22Cr2PSCwOL4hhFWQ=
+
+Name: res/drawable/dialog_title_btn_right.xml
+SHA1-Digest: 58JlAGVaejzT5m2YI+ydc3gG4vw=
+
+Name: res/drawable-hdpi-v4/btn_help_pressed.png
+SHA1-Digest: l6cOzNrCtMO/fc0boHNrQ8uZWFY=
+
+Name: res/drawable-hdpi-v4/top_bar2.png
+SHA1-Digest: xmVKu5imafuAYetEKuXajqV3KBU=
+
+Name: res/drawable/btn_parent.xml
+SHA1-Digest: W1ZEsl7c0aIkFUfA3HviRQCulhQ=
+
+Name: res/drawable-hdpi-v4/btn_list_default.png
+SHA1-Digest: spg1JqhPVdwjKLWXK+T8NCfkQko=
+
+Name: res/drawable-hdpi-v4/preview.png
+SHA1-Digest: DF0FAbSHnniO6HVrPNZWt7JoDKg=
+
+Name: res/drawable-hdpi-v4/btn_switch_pressed.png
+SHA1-Digest: FpKvPAxSOdlN+Yzg0S5sGgYFIXk=
+
+Name: res/drawable-hdpi-v4/list_select.png
+SHA1-Digest: mCtJUyrHSfIoB8t1bQL5IQ7cqO4=
+
+Name: res/drawable-hdpi-v4/btn_add_list.png
+SHA1-Digest: xHWDYVVryIjMlCQgCZmZytfGePs=
+
+Name: res/drawable-hdpi-v4/btn_list_pressed.png
+SHA1-Digest: C6fAEFj5jrF2rt9C/X7ofKGHaic=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_name.png
+SHA1-Digest: HxpzvjxTG8ZqVlAFduPBLbyxf0k=
+
+Name: res/drawable-hdpi-v4/sata_icon.png
+SHA1-Digest: PahJQdwMcmmvCZWokbHtycITG8o=
+
+Name: res/drawable/btn_edit.xml
+SHA1-Digest: Zh4y0RH2TAi3opRFabtCPddWKCc=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_sort.png
+SHA1-Digest: Q2Mv3P6Aim3WYSCK0lhSYuk7nlY=
+
+Name: res/drawable-hdpi-v4/btn_home_default.png
+SHA1-Digest: 2iiuMeFbQrHtwQiQHZ8AiH8jYww=
+
+Name: res/drawable-hdpi-v4/item_type_music.png
+SHA1-Digest: mZMUO4+/9C/BYvAxU09GiYC0708=
+
+Name: res/layout/help_dialog_layout.xml
+SHA1-Digest: J62XX24qJifNeCR2m0cCyEUP+yw=
+
+Name: res/drawable-hdpi-v4/btn_parent_pressed.png
+SHA1-Digest: WvXeIdwtLR3vXD4H8aHbY9b8Ye8=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_parent.png
+SHA1-Digest: 4FtWoZVOBbSIvz+rvjpu+YS0z4U=
+
+Name: resources.arsc
+SHA1-Digest: NXGudygVrpRWlpPeAJeKCQ6dg5w=
+
+Name: res/drawable-hdpi-v4/btn_switch_selected.png
+SHA1-Digest: VRsSrSNGyekEDNYcX00JwJWAWyc=
+
+Name: AndroidManifest.xml
+SHA1-Digest: wXpUnmarj0VkIJqdk2NxlZxutUU=
+
+Name: res/drawable-hdpi-v4/memory_default.png
+SHA1-Digest: gigsPZPNjK8K0kWkwSqJ/yy8miM=
+
+Name: res/layout/edit_dialog_layout.xml
+SHA1-Digest: gWFPWFrwRm1p/XHB+gy/sb9bO2g=
+
+Name: res/layout/sort_dialog_layout.xml
+SHA1-Digest: w/RKZlpHdKb7ryG0OJSLTIvDeXk=
+
+Name: res/drawable-hdpi-v4/noname_file_default.png
+SHA1-Digest: A7dBBna7q/XpHWfmANARM3ndV88=
+
+Name: res/drawable-hdpi-v4/item_preview_music.png
+SHA1-Digest: hlbMplIQ8corWLOJ/F4ZN++4yTY=
+
+Name: res/drawable-hdpi-v4/btn_home_selected.png
+SHA1-Digest: TH+0/nfGlPBlgSTBz2soZrogg6c=
+
+Name: res/drawable-hdpi-v4/sata_default.png
+SHA1-Digest: SwpspPdRSxDiQWKRMd67cnMJg/8=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_home.png
+SHA1-Digest: zUqLQ9ffxIfxG47ucJFPLbcvqa4=
+
+Name: res/drawable-hdpi-v4/btn_sort_default.png
+SHA1-Digest: HHOXIwAXYMJFxFYEKtNZlab58ug=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_size.png
+SHA1-Digest: n0EwxChWttGBbmY269nvE4UmhD8=
+
+Name: res/drawable-hdpi-v4/btn_thumbnail_select.png
+SHA1-Digest: M70XWLgQeNgEfLqJMeJeIXzIvWc=
+
+Name: res/drawable-hdpi-v4/scroll_bar_focus.png
+SHA1-Digest: sL2zjMQ9NYYj9KmJrOXDs2Iay18=
+
+Name: res/drawable-hdpi-v4/btn_home_pressed.png
+SHA1-Digest: fYVyLpp/oW/6xOwGJXXAf3axN0g=
+
+Name: res/drawable-hdpi-v4/cd_rom_default.png
+SHA1-Digest: WTHyY0qt2Y20J2BixAkO+KJyz5A=
+
+Name: res/drawable-hdpi-v4/item_preview_apk.png
+SHA1-Digest: UR+WPtMjzchcshzI75gTOz9PFds=
+
+Name: res/drawable/btn_close.xml
+SHA1-Digest: 8NkSw3cl9W4V6rDnyraPdHrlVP4=
+
+Name: res/drawable-hdpi-v4/top_bar1.png
+SHA1-Digest: UfTrjJJJeb+oPYN8Fsrpb4NCoqQ=
+
+Name: res/drawable-hdpi-v4/btn_list_select.png
+SHA1-Digest: +5ajyBPcfJAE+BVCGFbenDy6bZc=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_copy.png
+SHA1-Digest: +1p08ZLVS9C713Q5c/tebbp2TKk=
+
+Name: res/drawable-hdpi-v4/item_preview_photo.png
+SHA1-Digest: pMq2LWZLLeDJ70e0USliG76G83M=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_thumb.png
+SHA1-Digest: tSiXetmGRWGiXEti4Hqoo3FxGgs=
+
+Name: res/drawable-hdpi-v4/btn_help_selected.png
+SHA1-Digest: p86UTL80vrpYTUkOQZNy0lvYcv0=
+
+Name: res/drawable-hdpi-v4/usb_card_icon.png
+SHA1-Digest: NXU0zrplK0M12wVu3h+fGwA7Bto=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_paste.png
+SHA1-Digest: OFBQ1I4REKnMWzJRVhmhWAKpDmc=
+
+Name: res/layout/dialog_item.xml
+SHA1-Digest: nnIuUVB7alnrLA1aG3tQTSaIGts=
+
+Name: res/drawable-hdpi-v4/btn_parent_default.png
+SHA1-Digest: B2rhupbKjfDYcvN88XU8lT6su0M=
+
+Name: res/drawable/btn_bar_bg.xml
+SHA1-Digest: 4CPDyG2m2vjsHMh8pOUg01kmDcU=
+
+Name: res/drawable-hdpi-v4/btn_close_default.png
+SHA1-Digest: +MPr0vVC0mwK+cw3QCLtfhEs7OM=
+
+Name: res/drawable-hdpi-v4/item_img_sel.png
+SHA1-Digest: fyGj4lAUactzTeeVC4eItReVo1g=
+
+Name: res/drawable-hdpi-v4/list_unselect.png
+SHA1-Digest: bS9VZoIPOuNpPDhn2Eknosovn50=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_close.png
+SHA1-Digest: AjFqWBOr2IfIjrsF+ru42SttGDg=
+
+Name: res/drawable/btn_mode.xml
+SHA1-Digest: /IRr6BHNZRBKF5IlptwIL9IdWOc=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_edit.png
+SHA1-Digest: X70SlVYiHl10FUgZdmlEHO1Hw9k=
+
+Name: res/drawable-hdpi-v4/usb_default.png
+SHA1-Digest: L5yt61QJImw/oonT0fS3txyyiG8=
+
+Name: res/drawable-hdpi-v4/item_type_dir.png
+SHA1-Digest: rz8LEWhs2q09RFPhpOojspiRGEU=
+
+Name: res/drawable-hdpi-v4/item_preview_file.png
+SHA1-Digest: EtRCPNNkomQE1BC7OmGifPq5mZY=
+
+Name: res/drawable-hdpi-v4/dialog_title_btn_close_default.png
+SHA1-Digest: 8NPBPwiB27kskotev2J48aPHScw=
+
+Name: res/drawable-hdpi-v4/icon.png
+SHA1-Digest: m9lcld0NzoSrLQXjzn4uNqHwD+o=
+
+Name: res/drawable-hdpi-v4/item_img_unsel.png
+SHA1-Digest: T2QyFQ6EWwpcFqAuIP/x0J48grw=
+
+Name: res/mipmap-mdpi-v4/filebrower.png
+SHA1-Digest: 9JgkfDNf8hVBMB4i5djWdEAErbU=
+
+Name: res/drawable-hdpi-v4/item_type_photo.png
+SHA1-Digest: jW3/81br2wrv0FJtzUNwEr1Ucg0=
+
+Name: res/drawable-hdpi-v4/btn_mode_pressed.png
+SHA1-Digest: 7ekFgZ5pm/8bQ+vVJzDyEGYXMh0=
+
+Name: res/drawable-hdpi-v4/cd_rom_icon.png
+SHA1-Digest: EJkyjxzY6+9aW2ElNrlxas4hujY=
+
+Name: res/drawable-xhdpi-v4/banner.png
+SHA1-Digest: I000RIfUenV6uvKZtpYSrXqxkWo=
+
+Name: res/drawable-zh-xhdpi-v4/banner.png
+SHA1-Digest: iQlaHpxBCo9v8lTVU7KB5WT7oZg=
+
+Name: res/drawable-hdpi-v4/btn_mode_default.png
+SHA1-Digest: 0oTXAFgrjGGM0RH605sJNim5H8o=
+
+Name: res/drawable-hdpi-v4/btn_edit_default.png
+SHA1-Digest: TW+hqGTuHJKQVXZmX+k0JloHu30=
+
+Name: res/drawable-hdpi-v4/btn_edit_pressed.png
+SHA1-Digest: wx88kaeJUT2UWzxz+erHaKHccyI=
+
+Name: res/layout/filelist_item.xml
+SHA1-Digest: pHHjUe27APjb+r88DgRcvJ3C/uo=
+
+Name: res/layout/thumbnail.xml
+SHA1-Digest: oqtEDyw3oXZdnH8cSClpAHXIDls=
+
+Name: res/drawable-hdpi-v4/dialog_title_btn_close_selected.png
+SHA1-Digest: em3fCt4+YVTX4Z0AQMxm4ysKzLQ=
+
+Name: res/drawable/btn_thumbswitch.xml
+SHA1-Digest: 5HOSaVEQrRGYSJ9txZjWLJi8XrA=
+
+Name: res/drawable-hdpi-v4/btn_parent_selected.png
+SHA1-Digest: YWiK2ZHXfYB5idnC+yzOR7hF6uI=
+
+Name: res/drawable-hdpi-v4/item_img_nosel.png
+SHA1-Digest: Y4rKpINM5T6V7v8NpqZ2V5mlRdM=
+
+Name: res/drawable-hdpi-v4/dialog_item_img_sel.png
+SHA1-Digest: qpwIHjt6NtsN+Evl0tpX8i/4X5Y=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_date.png
+SHA1-Digest: u0Iyu9EIc0Kp2P1c+oLl3EVYXK0=
+
+Name: res/drawable-hdpi-v4/btn_edit_selected.png
+SHA1-Digest: sUPupuCigAA56SCvJMpH2pwYXXs=
+
+Name: res/drawable-hdpi-v4/btn_close_pressed.png
+SHA1-Digest: 6grD45BX/uMmwUJU9h7GoV5lO78=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_mode.png
+SHA1-Digest: ycyuZZwo24rrv4xqo/2QFn+VQZY=
+
+Name: res/drawable/btn_home.xml
+SHA1-Digest: 6m9Qe71TWcq7tzJPCkCiVtF4Z8k=
+
+Name: res/drawable-hdpi-v4/item_preview_video.png
+SHA1-Digest: ZhioP2NWR/WcT0ANrXtwxZ0RyoQ=
+
+Name: res/drawable-hdpi-v4/dialog_title_btn_close_press.png
+SHA1-Digest: KKYfGeUaybAE9BUsSd4N3URDOSM=
+
+Name: res/drawable-hdpi-v4/item_type_video.png
+SHA1-Digest: ZmlkDB7Qblgnd5V+0ya8D/GDFlU=
+
+Name: res/layout/file_rename.xml
+SHA1-Digest: 9Hm8hCMWz7BOdoG0nhXR/u6ftmk=
+
+Name: res/drawable-hdpi-v4/scroll_bar_unfocus.png
+SHA1-Digest: 7KeyxMGbw/BjTjVXPjIdIrFeeAg=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_delete.png
+SHA1-Digest: CBa9z3F1XoNV8svQMaqfDwR8BwU=
+
+Name: res/drawable-hdpi-v4/btn_thumbnail_default.png
+SHA1-Digest: Cgg6AoI5J/ckej/19NNU/OfFofg=
+
+Name: res/mipmap-xhdpi-v4/filebrower.png
+SHA1-Digest: KRMnuD6bhZlPAq35VKq9ZpRdvSk=
+
+Name: res/drawable-hdpi-v4/dialog_help_item_list.png
+SHA1-Digest: Z5BGQrqshQqQmWbRPqH9Six7n24=
+
+Name: res/drawable-hdpi-v4/dialog_item_img_unsel.png
+SHA1-Digest: yikdGEBtoo8/WMEnlGMMxA0Ib4g=
+
+Name: res/layout/click_dialog_layout.xml
+SHA1-Digest: psGhrwLSE7uhEWrwhawfDplXMxw=
+
+Name: res/drawable-hdpi-v4/txt_default.png
+SHA1-Digest: 4vyIsLZ3p/CYUmdO+H8gIY6RDMg=
+
+Name: res/drawable-hdpi-v4/btn_sort_selected.png
+SHA1-Digest: rRqsdCfwmLf0GAm0JcJmOmDnIV4=
+
+Name: res/drawable-hdpi-v4/btn_sort_pressed.png
+SHA1-Digest: fPy5vje77i56a1Xkq5jiKm2xyQs=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_rename.png
+SHA1-Digest: fvlUR4UpJUcjP70mQYr3/nyCijw=
+
+Name: res/drawable-hdpi-v4/sdcard_default.png
+SHA1-Digest: sIvgyUHOKk0Q3Jzbx2/1992Uanc=
+
+Name: res/drawable-hdpi-v4/item_type_apk.png
+SHA1-Digest: Ruq/lWmkL8m04sMVXcVKs6qyQmM=
+
+Name: res/drawable-hdpi-v4/dialog_item_type_cut.png
+SHA1-Digest: AWjUWyI1iwiPFf9/0/DVNIKd3aE=
+
+Name: res/layout/device_item.xml
+SHA1-Digest: uR/ZUlVRCdJGoke9gLwZHacYMtU=
+
+Name: res/drawable/btn_help.xml
+SHA1-Digest: ay+c2l/JwxAbRDwZFLHhcL33av4=
+
+Name: res/layout/main.xml
+SHA1-Digest: f7+lIERAd40u16uByOiLWLmJQak=
+
+Name: res/drawable-hdpi-v4/btn_mode_selected.png
+SHA1-Digest: 7C3ZFddKgbSQztwZC1tJomG0QHs=
+
+Name: res/drawable/btn_sort.xml
+SHA1-Digest: m8DXnStCrzAMe1TpQyICnDuq+Q8=
+
+Name: res/drawable-hdpi-v4/item_type_file.png
+SHA1-Digest: 1y6SUfspkWfbGPDdclmMhr7YrLw=
+
+Name: res/layout/gridview_item.xml
+SHA1-Digest: l0Gi/CqMJpefbDUco7P4UZqT1dI=
+
+Name: res/drawable/btn_listswitch.xml
+SHA1-Digest: vaxk+Q1CxCvW5pFf7amZGwNTE1I=
+
+Name: res/drawable-hdpi-v4/memory_icon.png
+SHA1-Digest: e+x5uzagnLa0XphAMKNbWDCE3PM=
+
+Name: res/drawable-hdpi-v4/btn_thumbnail_pressed.png
+SHA1-Digest: Fd+amnueIuv+7KroMJQgYYkt9Pk=
+
+Name: res/drawable-hdpi-v4/btn_close_selected.png
+SHA1-Digest: BFG6sOIsyRzb5Q0DyKI4rGp9mTA=
+
+Name: res/mipmap-xxhdpi-v4/filebrower.png
+SHA1-Digest: pvFVrvO9fi+XlOPMzHn5GBeU340=
+

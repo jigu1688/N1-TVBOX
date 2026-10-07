@@ -1,0 +1,34 @@
+rm /app/Dig/Dig.apk
+rm /app/Dig/oat/arm/Dig.odex
+rm /app/Dig/oat/arm/Dig.vdex
+rmdir /app/Dig/oat/arm
+rmdir /app/Dig/oat
+rmdir /app/Dig
+rm /app/PhiCalendar/PhiCalendar.apk
+rmdir /app/PhiCalendar
+rm /app/PhiTvManager/PhiTvManager.apk
+rmdir /app/PhiTvManager
+rm /app/PhiTvMusic/PhiTvMusic.apk
+rmdir /app/PhiTvMusic
+rm /app/PhiTvVideoPlayer/PhiTvVideoPlayer.apk
+rmdir /app/PhiTvVideoPlayer
+rm /app/PhiNasImagePlayer/PhiNasImagePlayer.apk
+rmdir /app/PhiNasImagePlayer
+rm /app/TvPhotoScreenSaver/TvPhotoScreenSaver.apk
+rmdir /app/TvPhotoScreenSaver
+mkdir /app/Reboot
+write tools/Reboot.apk /app/Reboot/Reboot.apk
+set_inode_field /app/Reboot mode 040755
+set_inode_field /app/Reboot/Reboot.apk mode 0100644
+mkdir /app/RootExplorer
+write tools/RootExplorer.apk /app/RootExplorer/RootExplorer.apk
+set_inode_field /app/RootExplorer mode 040755
+set_inode_field /app/RootExplorer/RootExplorer.apk mode 0100644
+mkdir /app/Terminal
+write tools/Terminal.apk /app/Terminal/Terminal.apk
+set_inode_field /app/Terminal mode 040755
+set_inode_field /app/Terminal/Terminal.apk mode 0100644
+write build_rom/system_root/bin/reboot-update /bin/reboot-update
+set_inode_field /bin/reboot-update mode 0100755
+set_inode_field /bin/reboot-update uid 0
+set_inode_field /bin/reboot-update gid 2000

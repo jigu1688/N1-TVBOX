@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:background="@drawable/btn_bar_bg" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="76.0dip" android:fadeScrollbars="false">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <Button android:id="@id/btn_thumbhome" android:background="@drawable/btn_home" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" style="@style/btn_style" />
+            <ToggleButton android:id="@id/btn_thumbmode" android:background="@drawable/btn_mode" android:layout_width="90.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" android:textOn="" android:textOff="" style="@style/btn_style" />
+            <Button android:id="@id/btn_thumbedit" android:background="@drawable/btn_edit" android:layout_width="90.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" style="@style/btn_style" />
+            <Button android:id="@id/btn_thumbsort" android:background="@drawable/btn_sort" android:layout_width="90.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" style="@style/btn_style" />
+            <Button android:id="@id/btn_thumbparent" android:background="@drawable/btn_parent" android:layout_width="90.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" style="@style/btn_style" />
+            <Button android:id="@id/btn_thumbswitch" android:background="@drawable/btn_thumbswitch" android:layout_width="90.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" style="@style/btn_style" />
+            <Button android:id="@id/btn_thumbhelp" android:background="@drawable/btn_help" android:layout_width="90.0dip" android:layout_height="56.0dip" android:layout_margin="4.0dip" style="@style/btn_style" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView android:textStyle="bold" android:textSize="20.0sp" android:textColor="@color/path_bar_text_color" android:id="@id/thumb_path" android:background="@drawable/btn_bar_bg" android:paddingLeft="36.0dip" android:paddingRight="36.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <GridView android:id="@id/mygridview" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:paddingTop="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:verticalSpacing="24.0dip" android:horizontalSpacing="16.0dip" android:stretchMode="columnWidth" android:columnWidth="190.0dip" android:numColumns="auto_fit" android:gravity="center" android:fastScrollEnabled="true" />
+</LinearLayout>

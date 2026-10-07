@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/editTextRename" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:singleLine="true" />
+    <Button android:id="@id/buttonCancel" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_below="@id/editTextRename" android:layout_alignRight="@id/editTextRename" />
+    <Button android:id="@id/buttonOK" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/ok" android:layout_toLeftOf="@id/buttonCancel" android:layout_below="@id/editTextRename" />
+</RelativeLayout>

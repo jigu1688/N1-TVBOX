@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nextgen.tvwidget">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:label="NextGen TV 仪表盘小组件套件"
+        android:icon="@drawable/ic_widget">
+
+        <!-- 1. 全能极客仪表盘 (时钟+天气+农历+硬件状态) -->
+        <receiver
+            android:name=".TvDashboardWidget"
+            android:label="NextGen 极客全能仪表盘 (时钟·天气·系统)">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="com.nextgen.tvwidget.ACTION_REFRESH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_dashboard_info" />
+        </receiver>
+
+        <!-- 2. 动态时钟与天气 (大时钟·农历·实时天气) -->
+        <receiver
+            android:name=".TvClockWeatherWidget"
+            android:label="NextGen 动态时钟与天气卡片">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="com.nextgen.tvwidget.ACTION_REFRESH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_clock_weather_info" />
+        </receiver>
+
+        <!-- 3. 硬件系统监视器 (CPU温度·RAM内存·闪存·IP) -->
+        <receiver
+            android:name=".TvSystemMonitorWidget"
+            android:label="NextGen 硬件系统监视仪表盘">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="com.nextgen.tvwidget.ACTION_REFRESH" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_system_monitor_info" />
+        </receiver>
+
+        <!-- 4. 城市与天气设置界面 -->
+        <activity
+            android:name=".CitySettingsActivity"
+            android:label="天气城市设置"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

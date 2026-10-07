@@ -1,0 +1,200 @@
+rm /app/PhiNasDMS/PhiNasDMS.apk
+rmdir /app/PhiNasDMS/oat/arm
+rmdir /app/PhiNasDMS/oat
+rmdir /app/PhiNasDMS
+rm /app/PhiNasImagePlayer/PhiNasImagePlayer.apk
+rmdir /app/PhiNasImagePlayer/oat/arm
+rmdir /app/PhiNasImagePlayer/oat
+rmdir /app/PhiNasImagePlayer
+rm /app/PhiTvMusic/PhiTvMusic.apk
+rmdir /app/PhiTvMusic/oat/arm
+rmdir /app/PhiTvMusic/oat
+rmdir /app/PhiTvMusic
+rm /app/PhiTvVideoPlayer/PhiTvVideoPlayer.apk
+rmdir /app/PhiTvVideoPlayer/oat/arm
+rmdir /app/PhiTvVideoPlayer/oat
+rmdir /app/PhiTvVideoPlayer
+rm /priv-app/PhiLauncher/PhiLauncher.apk
+rmdir /priv-app/PhiLauncher/oat/arm
+rmdir /priv-app/PhiLauncher/oat
+rmdir /priv-app/PhiLauncher
+rm /priv-app/PhiCloudBox/PhiCloudBox.apk
+rmdir /priv-app/PhiCloudBox/oat/arm
+rmdir /priv-app/PhiCloudBox/oat
+rmdir /priv-app/PhiCloudBox
+rm /priv-app/PhiDownloader/PhiDownloader.apk
+rmdir /priv-app/PhiDownloader/oat/arm
+rmdir /priv-app/PhiDownloader/oat
+rmdir /priv-app/PhiDownloader
+rm /app/webview/webview.apk
+rm /app/webview/oat/arm/webview.odex
+rm /app/webview/oat/arm64/webview.odex
+rmdir /app/webview/oat/arm
+rmdir /app/webview/oat/arm64
+rmdir /app/webview/oat
+rmdir /app/webview
+mkdir /app/WebViewGoogle
+set_inode_field /app/WebViewGoogle mode 040755
+write build_rom/system_root/app/WebViewGoogle/WebViewGoogle.apk /app/WebViewGoogle/WebViewGoogle.apk
+set_inode_field /app/WebViewGoogle/WebViewGoogle.apk mode 0100644
+set_inode_field /app/WebViewGoogle/WebViewGoogle.apk uid 0
+set_inode_field /app/WebViewGoogle/WebViewGoogle.apk gid 0
+rm /framework/framework-res.apk
+write build_rom/system_root/framework/framework-res.apk /framework/framework-res.apk
+set_inode_field /framework/framework-res.apk mode 0100644
+set_inode_field /framework/framework-res.apk uid 0
+set_inode_field /framework/framework-res.apk gid 0
+mkdir /priv-app/Provision
+set_inode_field /priv-app/Provision mode 040755
+write extracted_webpad/system_root/priv-app/Provision/Provision.apk /priv-app/Provision/Provision.apk
+set_inode_field /priv-app/Provision/Provision.apk mode 0100644
+set_inode_field /priv-app/Provision/Provision.apk uid 0
+set_inode_field /priv-app/Provision/Provision.apk gid 0
+mkdir /priv-app/PhiTvSettings
+set_inode_field /priv-app/PhiTvSettings mode 040755
+write build_rom/system_root/priv-app/PhiTvSettings/PhiTvSettings.apk /priv-app/PhiTvSettings/PhiTvSettings.apk
+set_inode_field /priv-app/PhiTvSettings/PhiTvSettings.apk mode 0100644
+set_inode_field /priv-app/PhiTvSettings/PhiTvSettings.apk uid 0
+set_inode_field /priv-app/PhiTvSettings/PhiTvSettings.apk gid 0
+rm /media/bootanimation.zip
+write build_rom/system_root/media/bootanimation.zip /media/bootanimation.zip
+set_inode_field /media/bootanimation.zip mode 0100644
+set_inode_field /media/bootanimation.zip uid 0
+set_inode_field /media/bootanimation.zip gid 0
+rm /bin/do_sleep.sh
+write build_rom/system_root/bin/do_sleep.sh /bin/do_sleep.sh
+set_inode_field /bin/do_sleep.sh mode 0100755
+set_inode_field /bin/do_sleep.sh uid 0
+set_inode_field /bin/do_sleep.sh gid 0
+rm /bin/webpadinit.sh
+write build_rom/system_root/bin/webpadinit.sh /bin/webpadinit.sh
+set_inode_field /bin/webpadinit.sh mode 0100755
+set_inode_field /bin/webpadinit.sh uid 0
+set_inode_field /bin/webpadinit.sh gid 0
+rm /etc/security/mac_permissions.xml
+write build_rom/system_root/etc/security/mac_permissions.xml /etc/security/mac_permissions.xml
+set_inode_field /etc/security/mac_permissions.xml mode 0100644
+set_inode_field /etc/security/mac_permissions.xml uid 0
+set_inode_field /etc/security/mac_permissions.xml gid 0
+mkdir /app/ATVLauncher
+set_inode_field /app/ATVLauncher mode 040755
+write build_rom/system_root/app/ATVLauncher/ATVLauncher.apk /app/ATVLauncher/ATVLauncher.apk
+set_inode_field /app/ATVLauncher/ATVLauncher.apk mode 0100644
+set_inode_field /app/ATVLauncher/ATVLauncher.apk uid 0
+set_inode_field /app/ATVLauncher/ATVLauncher.apk gid 0
+mkdir /app/NextGenWidget
+set_inode_field /app/NextGenWidget mode 040755
+write build_rom/system_root/app/NextGenWidget/NextGenWidget.apk /app/NextGenWidget/NextGenWidget.apk
+set_inode_field /app/NextGenWidget/NextGenWidget.apk mode 0100644
+set_inode_field /app/NextGenWidget/NextGenWidget.apk uid 0
+set_inode_field /app/NextGenWidget/NextGenWidget.apk gid 0
+mkdir /app/WebPush
+set_inode_field /app/WebPush mode 040755
+write build_rom/system_root/app/WebPush/WebPush.apk /app/WebPush/WebPush.apk
+set_inode_field /app/WebPush/WebPush.apk mode 0100644
+set_inode_field /app/WebPush/WebPush.apk uid 0
+set_inode_field /app/WebPush/WebPush.apk gid 0
+rm /app/FileBrowser/FileBrowser.apk
+write tools/FileBrowser_TV_HD.apk /app/FileBrowser/FileBrowser.apk
+set_inode_field /app/FileBrowser/FileBrowser.apk mode 0100644
+set_inode_field /app/FileBrowser/FileBrowser.apk uid 0
+set_inode_field /app/FileBrowser/FileBrowser.apk gid 0
+mkdir /priv-app/GmsCore
+set_inode_field /priv-app/GmsCore mode 040755
+write tools/microg_gmscore.apk /priv-app/GmsCore/GmsCore.apk
+set_inode_field /priv-app/GmsCore/GmsCore.apk mode 0100644
+set_inode_field /priv-app/GmsCore/GmsCore.apk uid 0
+set_inode_field /priv-app/GmsCore/GmsCore.apk gid 0
+mkdir /priv-app/FakeStore
+set_inode_field /priv-app/FakeStore mode 040755
+write tools/microg_fakestore.apk /priv-app/FakeStore/FakeStore.apk
+set_inode_field /priv-app/FakeStore/FakeStore.apk mode 0100644
+set_inode_field /priv-app/FakeStore/FakeStore.apk uid 0
+set_inode_field /priv-app/FakeStore/FakeStore.apk gid 0
+mkdir /priv-app/GsfProxy
+set_inode_field /priv-app/GsfProxy mode 040755
+write tools/microg_gsfproxy.apk /priv-app/GsfProxy/GsfProxy.apk
+set_inode_field /priv-app/GsfProxy/GsfProxy.apk mode 0100644
+set_inode_field /priv-app/GsfProxy/GsfProxy.apk uid 0
+set_inode_field /priv-app/GsfProxy/GsfProxy.apk gid 0
+write build_rom/system_root/etc/permissions/microg_permissions.xml /etc/permissions/microg_permissions.xml
+set_inode_field /etc/permissions/microg_permissions.xml mode 0100644
+set_inode_field /etc/permissions/microg_permissions.xml uid 0
+set_inode_field /etc/permissions/microg_permissions.xml gid 0
+rm /xbin/su
+write build_rom/system_root/xbin/su /xbin/su
+set_inode_field /xbin/su mode 0104755
+set_inode_field /xbin/su uid 0
+set_inode_field /xbin/su gid 2000
+write build_rom/system_root/xbin/daemonsu /xbin/daemonsu
+set_inode_field /xbin/daemonsu mode 0100755
+set_inode_field /xbin/daemonsu uid 0
+set_inode_field /xbin/daemonsu gid 2000
+write build_rom/system_root/xbin/supolicy /xbin/supolicy
+set_inode_field /xbin/supolicy mode 0100755
+set_inode_field /xbin/supolicy uid 0
+set_inode_field /xbin/supolicy gid 2000
+write build_rom/system_root/lib64/libsupol.so /lib64/libsupol.so
+set_inode_field /lib64/libsupol.so mode 0100644
+set_inode_field /lib64/libsupol.so uid 0
+set_inode_field /lib64/libsupol.so gid 0
+rm /xbin/busybox
+write build_rom/system_root/xbin/busybox /xbin/busybox
+set_inode_field /xbin/busybox mode 0100755
+set_inode_field /xbin/busybox uid 0
+set_inode_field /xbin/busybox gid 2000
+write build_rom/system_root/bin/webpad /bin/webpad
+set_inode_field /bin/webpad mode 0100755
+set_inode_field /bin/webpad uid 0
+set_inode_field /bin/webpad gid 2000
+write build_rom/system_root/bin/webpadinit.sh /bin/webpadinit.sh
+set_inode_field /bin/webpadinit.sh mode 0100755
+set_inode_field /bin/webpadinit.sh uid 0
+set_inode_field /bin/webpadinit.sh gid 2000
+write build_rom/system_root/etc/init/daemonsu.rc /etc/init/daemonsu.rc
+set_inode_field /etc/init/daemonsu.rc mode 0100644
+set_inode_field /etc/init/daemonsu.rc uid 0
+set_inode_field /etc/init/daemonsu.rc gid 0
+write build_rom/system_root/bin/do_sleep.sh /bin/do_sleep.sh
+set_inode_field /bin/do_sleep.sh mode 0100755
+set_inode_field /bin/do_sleep.sh uid 0
+set_inode_field /bin/do_sleep.sh gid 0
+write build_rom/system_root/bin/run_nc.sh /bin/run_nc.sh
+set_inode_field /bin/run_nc.sh mode 0100755
+set_inode_field /bin/run_nc.sh uid 0
+set_inode_field /bin/run_nc.sh gid 0
+write build_rom/system_root/bin/install-recovery.sh /bin/install-recovery.sh
+set_inode_field /bin/install-recovery.sh mode 0100755
+set_inode_field /bin/install-recovery.sh uid 0
+set_inode_field /bin/install-recovery.sh gid 0
+rm /etc/default_wallpaper.png
+write build_rom/system_root/etc/default_wallpaper.png /etc/default_wallpaper.png
+set_inode_field /etc/default_wallpaper.png mode 0100644
+set_inode_field /etc/default_wallpaper.png uid 0
+set_inode_field /etc/default_wallpaper.png gid 0
+mkdir /etc/atvlauncher
+set_inode_field /etc/atvlauncher mode 040755
+write build_rom/system_root/etc/atvlauncher/sections.db /etc/atvlauncher/sections.db
+set_inode_field /etc/atvlauncher/sections.db mode 0100644
+set_inode_field /etc/atvlauncher/sections.db uid 0
+set_inode_field /etc/atvlauncher/sections.db gid 0
+rm /etc/bluetooth/bt_stack.conf
+write build_rom/system_root/etc/bluetooth/bt_stack.conf /etc/bluetooth/bt_stack.conf
+set_inode_field /etc/bluetooth/bt_stack.conf mode 0100644
+set_inode_field /etc/bluetooth/bt_stack.conf uid 0
+set_inode_field /etc/bluetooth/bt_stack.conf gid 0
+rm /usr/keylayout/Generic.kl
+write build_rom/system_root/usr/keylayout/Generic.kl /usr/keylayout/Generic.kl
+set_inode_field /usr/keylayout/Generic.kl mode 0100644
+set_inode_field /usr/keylayout/Generic.kl uid 0
+set_inode_field /usr/keylayout/Generic.kl gid 0
+rm /usr/keylayout/Vendor_0001_Product_0001.kl
+write build_rom/system_root/usr/keylayout/Vendor_0001_Product_0001.kl /usr/keylayout/Vendor_0001_Product_0001.kl
+set_inode_field /usr/keylayout/Vendor_0001_Product_0001.kl mode 0100644
+set_inode_field /usr/keylayout/Vendor_0001_Product_0001.kl uid 0
+set_inode_field /usr/keylayout/Vendor_0001_Product_0001.kl gid 0
+rm /build.prop
+write build_rom/system_root/build.prop /build.prop
+set_inode_field /build.prop mode 0100644
+set_inode_field /build.prop uid 0
+set_inode_field /build.prop gid 0

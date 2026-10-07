@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glass_panel"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp">
+
+    <!-- Top: Header Info -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡ 斐讯 N1 极速版"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_sys_net_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/glass_capsule_accent"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="千兆网络 · 运行正常"
+            android:textColor="#E0F2FE"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom: 4 Major Hardware Status Badges -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!-- CPU Temp -->
+        <TextView
+            android:id="@+id/tv_sys_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/glass_capsule_warm"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="🌡️ CPU 48°C"
+            android:textColor="#FDE68A"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- RAM -->
+        <TextView
+            android:id="@+id/tv_sys_ram"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/glass_capsule"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="⚡ RAM 26%"
+            android:textColor="#A7F3D0"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Storage -->
+        <TextView
+            android:id="@+id/tv_sys_storage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/glass_capsule"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="📦 闪存 4.3G"
+            android:textColor="#E2E8F0"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- IP Address -->
+        <TextView
+            android:id="@+id/tv_sys_ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/glass_capsule"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="🌐 192.168.31.114"
+            android:textColor="#38BDF8"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
