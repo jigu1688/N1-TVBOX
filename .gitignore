@@ -3,6 +3,7 @@
 # =========================================================================
 
 # --- 1. Large Compiled Firmware Images (>1GB - GitHub Releases / Cloud Drive) ---
+_待清理*/
 *.img
 *.7z
 *.PARTITION
