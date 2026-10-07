@@ -64,4 +64,10 @@ chmod 755 /system/bin/do_sleep.sh 2>/dev/null
 chmod 755 /system/bin/run_nc.sh 2>/dev/null
 /system/bin/run_nc.sh >/dev/null 2>&1 &
 
+# 10. Hardware Video Picture Quality Enhancement (VPP Brightness & Contrast Boost for SurfaceView)
+settings put system screen_brightness 255 2>/dev/null
+echo 15 > /sys/class/amvecm/brightness 2>/dev/null
+echo 20 > /sys/class/amvecm/brightness1 2>/dev/null
+echo 10 > /sys/class/amvecm/contrast1 2>/dev/null
+
 exit 0
