@@ -19,7 +19,7 @@ tools/microg_gmscore.apk
 tools/gapps_raw/
 tools/kodi_libs/
 tools/Kodi_*.apk
-tools/kodi_*.apk
+tool7s/kodi_*.apk
 build_rom/system_root/app/WebViewGoogle/
 
 # --- 3. Consumer APK Bundle (Distribute via Releases/Cloud, not Git code repo) ---

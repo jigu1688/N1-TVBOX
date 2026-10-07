@@ -275,6 +275,13 @@ def build_v19_pristine_global():
         "set_inode_field /etc/bluetooth/bt_stack.conf uid 0",
         "set_inode_field /etc/bluetooth/bt_stack.conf gid 0",
 
+        # --- PHASE 6.5: Inject MediaCodec Seccomp Policy (Amlogic Hardware Video Decoding Fix) ---
+        "rm /etc/seccomp_policy/mediacodec-seccomp.policy",
+        "write build_rom/system_root/etc/seccomp_policy/mediacodec-seccomp.policy /etc/seccomp_policy/mediacodec-seccomp.policy",
+        "set_inode_field /etc/seccomp_policy/mediacodec-seccomp.policy mode 0100644",
+        "set_inode_field /etc/seccomp_policy/mediacodec-seccomp.policy uid 0",
+        "set_inode_field /etc/seccomp_policy/mediacodec-seccomp.policy gid 0",
+
         "rm /usr/keylayout/Generic.kl",
         "write build_rom/system_root/usr/keylayout/Generic.kl /usr/keylayout/Generic.kl",
         "set_inode_field /usr/keylayout/Generic.kl mode 0100644",
